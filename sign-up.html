@@ -131,10 +131,33 @@
         }
 
         .email-icon {
-            font-size: 64px;
+            font-size: 96px;
             margin-bottom: 24px;
+            animation: sendEmail 2s ease-in-out infinite;
         }
 
+        @keyframes sendEmail {
+            0%, 100% {
+                transform: translateX(0) translateY(0);
+                opacity: 1;
+            }
+            25% {
+                transform: translateX(10px) translateY(-10px);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translateX(20px) translateY(-20px);
+                opacity: 0.6;
+            }
+            75% {
+                transform: translateX(30px) translateY(-30px);
+                opacity: 0.3;
+            }
+            85% {
+                opacity: 0;
+            }
+        }
+        
         /* FOOTER */
         footer {
             background: var(--text-dark);
@@ -152,11 +175,11 @@
                 <div class="logo-icon">
                     <img src="ashiba-cyan-image.svg" alt="Ashiba" class="rounded-image">
                 </div>
-                Ashiba 足場
+                Ashiba
             </a>
-            <div class="nav-right">
+            <!-- <div class="nav-right">
                 <a href="index.html" class="nav-cta">Back to Home</a>
-            </div>
+            </div> -->
         </div>
     </nav>
 
@@ -165,9 +188,9 @@
         <div class="container">
             <div class="content-box">
                 <div class="email-icon">📧</div>
-                <h1>Thanks! Please check your email to confirm your spot on the waitlist!</h1>
-                <p>We've sent you a confirmation email. Click the link inside to verify your email address and secure your place on the waitlist.</p>
-                <p style="font-size: 14px; margin-top: 32px;">Don't see the email? Check your spam folder or contact us for help.</p>
+                <h1>Please check your email to confirm your spot on the waitlist!</h1>
+                <p>I've sent you a confirmation email. Click the link inside to verify your email address and secure your place on the waitlist.</p>
+                <p style="font-size: 14px; margin-top: 32px;">Don't see the email? Check your spam folder or <a href="mailto:ryotsu@ashiba-app.com" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">contact me</a> for help.</p>
             </div>
         </div>
     </section>
@@ -175,7 +198,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Ashiba 足場. All rights reserved.</p>
+            <p>&copy; 2025 Ashiba LLC. All rights reserved.</p>
         </div>
     </footer>
 </body>
