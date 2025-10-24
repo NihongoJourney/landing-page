@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn Japanese with Manga Flashcards</title>
+    <meta name="theme-color" content="#0092ca">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Learn Japanese with Manga Flashcards | Ashiba</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="ashiba-cyan-image.svg">
@@ -11,6 +14,11 @@
     <!-- Primary Meta Tags -->
     <meta name="title" content="Learn Japanese with Manga Flashcards">
     <meta name="description" content="Build your vocabulary through authentic manga panels. Learn Japanese with stories made by native speakers for native speakers.">
+    <meta name="keywords" content="learn Japanese, manga flashcards, Japanese vocabulary, manga language learning, Japanese study app, spaced repetition, anime Japanese, reading manga in Japanese">
+    <meta name="author" content="Ashiba">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <link rel="canonical" href="https://ashiba-app.com/">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -18,6 +26,11 @@
     <meta property="og:title" content="Learn Japanese with Manga Flashcards">
     <meta property="og:description" content="Build your vocabulary through authentic manga panels. Learn Japanese with stories made by native speakers for native speakers.">
     <meta property="og:image" content="https://ashiba-app.com/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ashiba - Learn Japanese with Manga Flashcards">
+    <meta property="og:site_name" content="Ashiba">
+    <meta property="og:locale" content="en_US">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -25,6 +38,42 @@
     <meta name="twitter:title" content="Learn Japanese with Manga Flashcards">
     <meta name="twitter:description" content="Build your vocabulary through authentic manga panels. Learn Japanese with stories made by native speakers for native speakers.">
     <meta name="twitter:image" content="https://ashiba-app.com/social-preview.png">
+    <meta name="twitter:image:alt" content="Ashiba - Learn Japanese with Manga Flashcards">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Ashiba",
+      "description": "Learn Japanese through authentic manga panels with smart flashcards and spaced repetition",
+      "url": "https://ashiba-app.com/",
+      "applicationCategory": "EducationalApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "15.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2025-12-31"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Ashiba LLC"
+      },
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Ashiba LLC",
+      "url": "https://ashiba-app.com/",
+      "logo": "https://ashiba-app.com/ashiba-cyan-image.svg",
+      "sameAs": []
+    }
+    </script>
     
     <style>
         * {
@@ -659,6 +708,54 @@
             opacity: 0.7;
         }
 
+        /* WAITLIST FORM STYLES */
+        .waitlist-form {
+            display: flex;
+            gap: 8px;
+            max-width: 500px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .waitlist-email {
+            flex: 1;
+            padding: 18px;
+            border: 2px solid var(--primary-color);
+            border-radius: 6px;
+            font-size: 16px;
+            min-width: 0; /* Allow flex item to shrink below content size */
+        }
+
+        .waitlist-button {
+            padding: 18px 32px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .waitlist-button:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .waitlist-benefit {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 14px;
+            color: var(--text-light);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+        }
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .hero h1 {
@@ -696,6 +793,18 @@
                 padding: 10px 16px;
                 font-size: 14px;
                 white-space: nowrap;
+            }
+
+            /* Waitlist form responsive */
+            .waitlist-form {
+                flex-direction: column;
+                max-width: 100%;
+                gap: 12px;
+            }
+
+            .waitlist-button {
+                padding: 16px 24px;
+                width: 100%;
             }
         }
 
@@ -739,11 +848,10 @@
     <section class="hero">
         <div class="container">
             <!-- EDIT MAIN HEADLINE HERE -->
-            <h1>Read Japanese with Ease Using <span class="highlight">Manga Flashcards</span></h1>
+            <h1>Read Japanese with Ease Using <span class="highlight">Manga Flashcards</span> with the Ashiba App</h1>
             
             <!-- EDIT SUBHEADING HERE -->
-            <p class="subheading">Build your vocabulary through authentic panels from your favorite series. Learn like a native with stories made by native speakers for native speakers.</p>
-            
+            <p class="subheading">Stop memorizing random words. Build your vocabulary naturally through dialogue written by and for native speakers.
             <!-- CALL TO ACTION BUTTONS -->
             <!-- <div class="cta-buttons">
                 <a href="#" class="btn-primary">Try It Free for 3 Days</a>
@@ -751,19 +859,19 @@
 
             <form action="https://app.kit.com/forms/8688705/subscriptions" 
                 method="post"
-                style="display: flex; gap: 8px; max-width: 400px; margin: 0 auto;">
+                class="waitlist-form">
             
                 <input type="email" 
                         name="email_address" 
                         placeholder="Enter your email" 
                         required
-                        style="flex: 1; padding: 18px; border: 2px solid #0092ca; border-radius: 6px; font-size: 16px;">
+                        class="waitlist-email">
                 
-                <button type="submit" 
-                        style="padding: 18px 32px; background: #0092ca; color: white; border: none; border-radius: 6px; font-weight: 600; font-size: 16px; cursor: pointer; white-space: nowrap;">
+                <button type="submit" class="waitlist-button">
                     Join Waitlist
                 </button>
             </form>
+            <p class="waitlist-benefit">Get updates as we approach our March 2026 launch + an exclusive discount code when we go live</p>
 
             <!-- SOCIAL PROOF MINI -->
             <div class="social-proof-mini">
@@ -783,6 +891,37 @@
                     <source src="demo.webm" type="video/webm">
                     Your browser doesn't support video playback.
                 </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How the Ashiba App Works</h2>
+                <p>Start Reading Manga in 3 Simple Steps</p>
+            </div>
+
+            <!-- EDIT STEPS HERE -->
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Choose Your Manga</h3>
+                    <p>Pick a title from popular series to see how much of the vocab you already know and start learning what you don't.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Study Daily</h3>
+                    <p>Build your knowledge by studying manga panel flashcards for just 15-20 minutes a day. See words in context and build vocabulary naturally.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Read Fluently</h3>
+                    <p>Watch your reading speed accelerate as vocabulary becomes automatic. Enjoy manga without constant dictionary lookups.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -830,44 +969,13 @@
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
                     <h3>Study Anywhere</h3>
-                    <p>Practice on any device with our web app. Native apps rolling out in 2026.</p>
+                    <p>Practice on any device with our web app lauching in March 2026. Native apps rolling out by Summer 2026.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
                     <h3>Track Your Growth</h3>
                     <p>Visual progress tracking shows your vocabulary expansion and reading level improvements day by day.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="how-it-works" id="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2>Start Reading Manga in 3 Simple Steps</h2>
-                <p>Go from わからへん to 日本語上手</p>
-            </div>
-
-            <!-- EDIT STEPS HERE -->
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Choose Your Manga</h3>
-                    <p>Pick a title from popular series to see how much you already know and start learning the vocab you don't.</p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Study Daily</h3>
-                    <p>Make serious gains just by studying manga panel flashcards for just 15-20 minutes a day. See words in context and build vocabulary naturally.</p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Read Fluently</h3>
-                    <p>Watch your reading speed accelerate as vocabulary becomes automatic. Enjoy manga without constant dictionary lookups.</p>
                 </div>
             </div>
         </div>
@@ -901,7 +1009,7 @@
     <section class="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2>Learners Love Ashiba</h2>
+                <h2>Learners Love the Ashiba App</h2>
                 <p>Real stories from manga readers just like you</p>
             </div>
 
@@ -1054,25 +1162,25 @@
             <!-- <h2>Start Reading Manga in Japanese Today</h2> -->
             <!-- <p>Join thousands of people learning Japanese with Manga they love</p> -->
             <h2>Want to Learn Japanese with Manga?</h2>
-            <p>Don't miss out on the launch!</p>
+            <p>Don't miss out on the launch of the Ashiba App!</p>
             <!-- <div class="cta-buttons">
                 <a href="#" class="btn-primary">Try It Free for 3 Days</a>
             </div> -->
             <form action="https://app.kit.com/forms/8688705/subscriptions" 
                 method="post"
-                style="display: flex; gap: 8px; max-width: 400px; margin: 0 auto;">
+                class="waitlist-form">
             
                 <input type="email" 
                         name="email_address" 
                         placeholder="Enter your email" 
                         required
-                        style="flex: 1; padding: 18px; border: 2px solid #0092ca; border-radius: 6px; font-size: 16px;">
+                        class="waitlist-email">
                 
-                <button type="submit" 
-                        style="padding: 18px 32px; background: #0092ca; color: white; border: none; border-radius: 6px; font-weight: 600; font-size: 16px; cursor: pointer; white-space: nowrap;">
+                <button type="submit" class="waitlist-button">
                     Join Waitlist
                 </button>
             </form>
+            <p class="waitlist-benefit">Get updates as we approach our March 2026 launch + an exclusive discount code when we go live</p>
         </div>
     </section>
 
